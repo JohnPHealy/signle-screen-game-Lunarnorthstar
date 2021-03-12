@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         startPos = player.transform.position;
         score = 0;
         UpdateUI();
-        PauseGame();
+        //PauseGame();
 
     }
 
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         addScore.Invoke(score.ToString());
     }
 
-    
+    /*
     public void PauseGame()
     {
         Time.timeScale = 0;
@@ -48,5 +48,5 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
     }
-    
+    */
 }
