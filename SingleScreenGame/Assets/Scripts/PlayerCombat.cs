@@ -9,14 +9,21 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private LayerMask playerLayers;
     [SerializeField] private GameManager manager;
     [SerializeField] private int scoreToGive = 100;
-
+    [SerializeField] private bool IsLava;
 
     private void Update()
     {
         if (playerCheck.IsTouchingLayers(playerLayers))
         {
             manager.AddScore(scoreToGive);
-            Destroy(gameObject);
+            if (IsLava == false)
+            {
+                Destroy(gameObject);
+            }
+            if (IsLava == true)
+            {
+                manager.RespawnPlayer();
+            }
         }
     }
 

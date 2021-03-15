@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public void RespawnPlayer()
     {
         player.transform.position = startPos;
-        score = 0;
+        //score = 0;
         UpdateUI();
     }
 
