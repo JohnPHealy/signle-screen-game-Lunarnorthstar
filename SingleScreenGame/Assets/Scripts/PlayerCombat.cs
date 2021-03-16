@@ -9,6 +9,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private LayerMask playerLayers;
     [SerializeField] private GameManager manager;
     [SerializeField] private int scoreToGive = 100;
+    [SerializeField] private int flamecount = 1;
     [SerializeField] private bool IsLava;
 
     private void Update()
@@ -16,8 +17,10 @@ public class PlayerCombat : MonoBehaviour
         if (playerCheck.IsTouchingLayers(playerLayers))
         {
             manager.AddScore(scoreToGive);
+            
             if (IsLava == false)
             {
+                manager.LowerCount(flamecount);
                 Destroy(gameObject);
             }
             if (IsLava == true)

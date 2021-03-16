@@ -8,13 +8,16 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private UnityEvent<string> addScore;
+    [SerializeField] private UnityEvent<string> lowerCount;
     private Vector3 startPos;
     private int score;
+    private int flames;
 
     private void Start()
     {
         startPos = player.transform.position;
         score = 0;
+        flames = 37;
         UpdateUI();
         PauseGame();
 
@@ -32,10 +35,16 @@ public class GameManager : MonoBehaviour
         score += scoreAmt;
         UpdateUI();
     }
+    public void LowerCount(int flamecounts)
+    {
+        flames -= flamecounts;
+        UpdateUI();
+    }
 
     private void UpdateUI()
     {
         addScore.Invoke(score.ToString());
+        lowerCount.Invoke(flames.ToString());
     }
 
     
