@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3607598075372422861}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.349, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3938948016962763304}
@@ -44,9 +44,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.04679352, y: -0.028076023}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.45632616
 --- !u!1 &3938948016962763305
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,8 +121,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
-  m_Color: {r: 0.2971698, g: 0.7588036, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 758c77c6b2035d04fa296dc0a107f064, type: 3}
+  m_Color: {r: 0.9607637, g: 0.9622642, b: 0.5492168, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -145,9 +145,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0000019073486, y: 0}
+  m_Offset: {x: -0.0000018626451, y: -0.109184906}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.60918486
 --- !u!114 &869523879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +166,4 @@ MonoBehaviour:
     m_Bits: 64
   manager: {fileID: 0}
   scoreToGive: 100
+  IsLava: 0
